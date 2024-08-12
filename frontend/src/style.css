@@ -1,0 +1,193 @@
+/* Main app styling */
+.App {
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    background-color: #121212; /* Dark background for the entire app */
+    color: #e0e0e0; /* Light grey text for better readability */
+    min-height: 100vh;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Title-container {
+    margin-bottom: 20px; /* Spacing between the title and the chat container */
+    width: 100%; /* Same width as the chat container for alignment */
+    text-align: center;;
+}
+.App-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center children horizontally */
+    width: 80%; /* Relative to parent */
+    max-width: 600px; /* Max width */
+    margin: 20px auto; /* Center horizontally in the parent */
+    padding: 20px; /* Padding around the container */
+    border-radius: 10px; /* Rounded corners */
+    background-color: #2c2c2c; /* Background color */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.5); /* Shadow for depth */
+}
+.App-container:hover .title {
+    color: #ffffff; /* Bright color on hover */
+}
+
+/* Header styling */
+.App-header { 
+    background-color: #1f1f1f; /* Darker shade for header */
+    padding: 10px 20px; /* Reduced padding */
+    border-radius: 10px 10px 0 0; /* Round only the top corners */
+    color: transparent; /* Make it transparent by default */
+    text-align: left; /* Aligns text to the left */
+    width: auto; /* Auto width based on content size */
+    margin: 0 auto; /* Center the header if desired, or adjust as necessary */
+    transition: color 0.3s; /* Smooth transition for color change */
+}
+.title {
+    font-size: 1.5rem; /* Smaller font size */
+    color: transparent; /* Transparent by default */
+    position: relative; /* Absolute positioning */
+    width: 100%; /* Full container width */
+    text-align: center; /* Center text */
+    box-sizing: border-box;
+    padding: 10px 0;
+    transition: color 0.3s; /* Smooth transition for color */
+}
+
+.App-header:hover .title {
+    color: #5a1212; /* Text color appears on hover over the header specifically */
+}
+.title:hover {
+    color: #5a1212; /* Change to a visible color on hover */
+}
+/* Chat container styling */
+.chat-container {
+    background: #2c2c2c;
+    padding: 20px;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+    width: 80%; /* Make it relative to the screen size */
+    max-width: 600px; /* Limit the maximum width */
+    min-width: 300px; /* Minimum width for smaller screens */
+    margin: 20px auto;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Chat messages area styling */
+.messages {
+    height: 300px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    gap: 10px;
+    padding: 10px;
+}
+
+/* Individual message styling */
+.message {
+    padding: 10px 20px;
+    border-radius: 20px;
+    max-width: 70%;
+    word-wrap: break-word;
+    text-align: left;
+}
+
+/* Styling for user messages */
+.user {
+    align-self: flex-end;
+    background-color: #0a58ca;  /* Blue color for user messages */
+    color: #ffffff;
+}
+
+/* Styling for bot messages */
+.bot {
+    align-self: flex-start;
+    background-color: #333333;  /* Slightly lighter grey for bot messages */
+    color: #e0e0e0;
+}
+
+/* Input and button styling */
+input {
+    width: calc(100% - 90px); /* Adjust based on button width to fit on one line */
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #444; /* Ensure visibility on all backgrounds */
+    border-radius: 10px;
+    background-color: #333;
+    color: white;
+    height: 48px; /* Ensures input and button are the same height */
+    vertical-align: top;
+}
+button {
+    font-size: 1rem;
+    width: 80px;
+    padding: 10px;
+    height: 48px; /* Ensures input and button are the same height */
+    vertical-align: top;
+    margin-left: 10px; /* Ensure some space between the input and the button */
+}
+input {
+    font-size: 1rem;
+    width: calc(100% - 80px);  /* Adjust width to make space for the button */
+    color: #ffffff;  /* White text color for input */
+    background-color: #333;  /* Dark background for input */
+}
+
+button {
+    background: none; /* Removes default background */
+    border: none; /* Removes default border */
+    color: #0d6efd; /* Bootstrap primary blue, adjust as needed */
+    cursor: pointer;
+    width: 48px; /* Small, square dimension for the button */
+    padding: 0; /* Reduces padding */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button:hover, button:focus {
+    background: #0056b3;
+    outline: none; /* Remove focus outline if you are providing an alternative */
+}
+
+input:focus {
+    border-color: #0056b3;
+    outline: none;
+}
+
+.chat-input-container {
+    display: flex;
+    align-items: center; /* Aligns items vertically center */
+    background-color: #333; /* Matches input background */
+    border-radius: 22px; /* Rounded corners for the container */
+    overflow: hidden; /* Ensures nothing spills out of the container */
+}
+
+input {
+    flex-grow: 1; /* Allows input to fill space */
+    border: none; /* Removes border */
+    outline: none; /* Removes focus outline */
+    padding: 10px 20px; /* Comfortable padding around text */
+    font-size: 1rem; /* Appropriate text size */
+    background: transparent; /* Transparent background to blend with container */
+    color: white; /* Text color */
+}
+
+button {
+    background: transparent; /* Transparent background */
+    color: #0d6efd; /* Color for the icon */
+    border: none; /* No borders */
+    padding: 10px; /* Padding around the icon */
+    cursor: pointer; /* Pointer cursor on hover */
+    display: flex; /* Ensures the contents are centered */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+button:hover, button:focus {
+    background: #0056b3; /* Slight background on hover */
+}
